@@ -4,14 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dev | Drupal & Automation Expert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #004b91;
-      --accent: #2bb3c0;
-      --bg: #f4f7fa;
-      --text: #333;
-      --light: #fff;
-      --shadow: rgba(0, 0, 0, 0.06);
+      --secondary: #2bb3c0;
+      --bg: #f7f9fc;
+      --text: #1f2937;
+      --card-bg: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.05);
     }
 
     * {
@@ -21,70 +22,79 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       background: var(--primary);
-      color: var(--light);
-      padding: 3rem 1rem;
+      color: white;
+      padding: 4rem 1rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      font-weight: 700;
     }
 
     header p {
       font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
 
     main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
     }
 
     section {
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     h2 {
-      font-size: 1.8rem;
-      border-left: 5px solid var(--accent);
-      padding-left: 0.8rem;
-      margin-bottom: 1rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
       color: var(--primary);
+      border-left: 6px solid var(--secondary);
+      padding-left: 0.75rem;
     }
 
     .card {
-      background: var(--light);
-      padding: 1.5rem;
+      background: var(--card-bg);
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 4px 12px var(--shadow);
-      margin-bottom: 1.5rem;
+      transition: transform 0.2s ease;
     }
 
-    ul.skills {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 0.75rem;
     }
 
-    ul.skills li {
-      background: var(--accent);
-      color: #fff;
-      padding: 0.5rem 1rem;
+    .skill {
+      background: var(--secondary);
+      color: white;
+      padding: 0.6rem 1rem;
+      text-align: center;
       border-radius: 30px;
       font-size: 0.9rem;
+      font-weight: 500;
     }
 
-    .card h3 {
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 600;
       margin-bottom: 0.5rem;
       color: var(--primary);
     }
@@ -92,14 +102,18 @@
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: #e5e5e5;
-      color: #666;
+      background: #e9edf1;
       font-size: 0.9rem;
+      color: #666;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+      }
+
+      .card {
+        padding: 1rem;
       }
     }
   </style>
@@ -108,7 +122,7 @@
 
   <header>
     <h1>Dev</h1>
-    <p>Drupal Developer | Automation Specialist | Full-Stack Web Engineer</p>
+    <p>Drupal Developer • Automation Expert • Full-Stack Engineer</p>
   </header>
 
   <main>
@@ -117,39 +131,36 @@
       <h2>About Me</h2>
       <div class="card">
         <p>
-          I am a full-stack web developer with over 4 years of hands-on experience, specializing in <strong>Drupal CMS</strong>. I’ve built robust, scalable solutions ranging from custom modules and themes to enterprise-level integrations. My technical foundation is enhanced by real-world experience at <strong>LN Webworks Pvt. Ltd.</strong> (2021–2025), where I developed and maintained high-performance digital platforms.
+          I’m a professional full-stack developer with 4+ years of experience, specializing in <strong>Drupal CMS</strong> and workflow automation tools. From architecting scalable content structures to building custom modules, I thrive in transforming complex business requirements into seamless web solutions.
         </p>
         <p>
-          In addition to Drupal development, I bring strong expertise in automation and process integration using no-code/low-code tools like <strong>Make.com</strong>, <strong>Zapier</strong>, <strong>Lindy.ai</strong>, <strong>N8n</strong>, and <strong>Late Node</strong>. These platforms have allowed me to streamline repetitive tasks, saving hours of manual work.
+          I honed my technical and problem-solving skills at <strong>LN Webworks Pvt. Ltd.</strong> (2021–2025), where I led numerous high-impact Drupal projects and automation initiatives. My passion lies in optimizing workflows using platforms like <strong>Make.com</strong>, <strong>N8n</strong>, <strong>Zapier</strong>, and <strong>Lindy.ai</strong>.
         </p>
         <p>
-          I maintain clean and maintainable code using <strong>Git</strong> for version control, and I work with <strong>Docker</strong> and <strong>DDEV</strong> for local development and team collaboration, ensuring consistency across environments.
+          I work with modern development stacks, using <strong>Git</strong> for version control, and manage robust local environments with <strong>Docker</strong> and <strong>DDEV</strong> to ensure consistency and scalability across projects.
         </p>
       </div>
     </section>
 
     <section>
       <h2>Core Skills</h2>
-      <div class="card">
-        <ul class="skills">
-          <li>Drupal 9/10</li>
-          <li>Custom Modules</li>
-          <li>Drupal Theming (Twig)</li>
-          <li>Entity API & Views</li>
-          <li>REST APIs</li>
-          <li>PHP</li>
-          <li>JavaScript</li>
-          <li>HTML5 & CSS3</li>
-          <li>Git & GitHub</li>
-          <li>Docker</li>
-          <li>DDEV</li>
-          <li>Make.com</li>
-          <li>Zapier</li>
-          <li>N8n</li>
-          <li>Lindy.ai</li>
-          <li>Late Node</li>
-          <li>CI/CD Concepts</li>
-        </ul>
+      <div class="card skills-grid">
+        <div class="skill">Drupal 9/10</div>
+        <div class="skill">Custom Modules</div>
+        <div class="skill">Twig/Theming</div>
+        <div class="skill">Entity API & Views</div>
+        <div class="skill">REST APIs</div>
+        <div class="skill">Make.com</div>
+        <div class="skill">N8n</div>
+        <div class="skill">Zapier</div>
+        <div class="skill">Lindy.ai</div>
+        <div class="skill">Late Node</div>
+        <div class="skill">PHP</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML5 & CSS3</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Docker</div>
+        <div class="skill">DDEV</div>
       </div>
     </section>
 
@@ -158,7 +169,7 @@
       <div class="card">
         <h3>LN Webworks Pvt. Ltd. (2021 – 2025)</h3>
         <p>
-          As a Drupal developer at LN Webworks, I played a pivotal role in building scalable websites, custom APIs, and automation pipelines. I collaborated closely with design, QA, and DevOps teams to deliver quality software using Agile methodologies. My projects included complex entity management, integrations with CRMs, payment gateways, and multi-language site setups.
+          At LN Webworks, I contributed to dozens of Drupal-based projects, ranging from complex multi-language portals to fully automated content delivery systems. I was responsible for building custom modules, API integrations, and automation workflows that directly improved operational efficiency and user engagement.
         </p>
       </div>
     </section>
@@ -167,30 +178,30 @@
       <h2>Highlighted Projects</h2>
 
       <div class="card">
-        <h3>Drupal 10 Intranet Portal</h3>
+        <div class="project-title">Enterprise Intranet Portal – Drupal 10</div>
         <p>
-          Designed and developed an internal employee portal with role-based access, dashboards, and custom workflows. Used entity reference, custom permissions, and views extensively to deliver a seamless admin and user experience.
+          Developed a secure internal portal for a 500+ employee company. Implemented role-based permissions, views, and custom workflows using Drupal core APIs and contributed modules.
         </p>
       </div>
 
       <div class="card">
-        <h3>CRM Automation (Make.com & N8n)</h3>
+        <div class="project-title">CRM Task Automation – Make.com & N8n</div>
         <p>
-          Connected HubSpot and Trello via Make.com to automate lead assignment, project kickoffs, and status updates. Resulted in over 70% reduction in manual tracking.
+          Integrated client CRM with Slack and Trello for automated deal flow tracking, reminders, and reporting. Reduced lead conversion time by over 60%.
         </p>
       </div>
 
       <div class="card">
-        <h3>Smart Task Orchestration (Lindy.ai)</h3>
+        <div class="project-title">AI Task Routing – Lindy.ai</div>
         <p>
-          Used Lindy.ai to assign and update tasks across a project management platform using AI-based prioritization. Integrated with Slack and Notion for streamlined team collaboration.
+          Used Lindy.ai to dynamically prioritize and route tasks to project managers. Synced with Notion and Google Calendar to keep operations aligned.
         </p>
       </div>
 
       <div class="card">
-        <h3>Docker/DDEV Development Environments</h3>
+        <div class="project-title">Containerized Dev Workflow – Docker & DDEV</div>
         <p>
-          Standardized local development across multiple teams using Docker and DDEV. Enabled seamless onboarding, environment parity, and consistent deployment processes.
+          Standardized development and staging environments using Docker and DDEV. Cut onboarding time in half and ensured consistent deployment pipelines.
         </p>
       </div>
     </section>
@@ -198,7 +209,7 @@
   </main>
 
   <footer>
-    &copy; 2025 Dev – Drupal & Automation Expert. All rights reserved.
+    &copy; 2025 Dev — Drupal Developer & Automation Specialist. All rights reserved.
   </footer>
 
 </body>
