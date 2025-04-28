@@ -2,214 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dev | Drupal & Automation Expert</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #004b91;
-      --secondary: #2bb3c0;
-      --bg: #f7f9fc;
-      --text: #1f2937;
-      --card-bg: #ffffff;
-      --shadow: rgba(0, 0, 0, 0.05);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    /* Global Styles */
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
+      color: #333;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1, h2, h3 {
+      color: #004b91;
+    }
+
+    a {
+      color: #2bb3c0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
     }
 
     header {
-      background: var(--primary);
+      background: url('banner-image.jpg') no-repeat center center/cover;
+      padding: 6rem 2rem;
       color: white;
-      padding: 4rem 1rem;
-      text-align: center;
     }
 
     header h1 {
       font-size: 3rem;
-      font-weight: 700;
+      animation: fadeIn 2s ease-in-out;
     }
 
     header p {
       font-size: 1.2rem;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
     }
 
-    main {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
-    section {
-      margin-bottom: 3rem;
+    /* Skills Section */
+    .skills {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: var(--primary);
-      border-left: 6px solid var(--secondary);
-      padding-left: 0.75rem;
+    .skill-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 180px;
+      transition: transform 0.3s ease;
     }
 
-    .card {
-      background: var(--card-bg);
-      padding: 1.5rem 2rem;
-      margin-bottom: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px var(--shadow);
-      transition: transform 0.2s ease;
+    .skill-card:hover {
+      transform: translateY(-10px);
     }
 
-    .card:hover {
-      transform: translateY(-4px);
+    .skill-card img {
+      width: 50px;
+      height: 50px;
     }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 0.75rem;
+    .experience {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
     }
 
-    .skill {
-      background: var(--secondary);
-      color: white;
-      padding: 0.6rem 1rem;
-      text-align: center;
-      border-radius: 30px;
-      font-size: 0.9rem;
-      font-weight: 500;
+    .experience-item {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      transition: transform 0.3s ease;
     }
 
-    .project-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--primary);
+    .experience-item:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Project Section */
+    .projects {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 4rem;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
     }
 
     footer {
+      background: #004b91;
+      color: white;
+      padding: 2rem;
       text-align: center;
-      padding: 2rem 1rem;
-      background: #e9edf1;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      .card {
-        padding: 1rem;
-      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Dev</h1>
-    <p>Drupal Developer • Automation Expert • Full-Stack Engineer</p>
+    <h1>Hi, I'm Dev</h1>
+    <p>Drupal Developer • Automation Specialist • Full-Stack Web Developer</p>
   </header>
 
-  <main>
-
-    <section>
-      <h2>About Me</h2>
-      <div class="card">
-        <p>
-          I’m a professional full-stack developer with 4+ years of experience, specializing in <strong>Drupal CMS</strong> and workflow automation tools. From architecting scalable content structures to building custom modules, I thrive in transforming complex business requirements into seamless web solutions.
-        </p>
-        <p>
-          I honed my technical and problem-solving skills at <strong>LN Webworks Pvt. Ltd.</strong> (2021–2025), where I led numerous high-impact Drupal projects and automation initiatives. My passion lies in optimizing workflows using platforms like <strong>Make.com</strong>, <strong>N8n</strong>, <strong>Zapier</strong>, and <strong>Lindy.ai</strong>.
-        </p>
-        <p>
-          I work with modern development stacks, using <strong>Git</strong> for version control, and manage robust local environments with <strong>Docker</strong> and <strong>DDEV</strong> to ensure consistency and scalability across projects.
-        </p>
+  <section>
+    <h2>Technical Expertise</h2>
+    <div class="skills">
+      <div class="skill-card">
+        <img src="drupal-logo.svg" alt="Drupal" />
+        <p>Drupal Development</p>
       </div>
-    </section>
-
-    <section>
-      <h2>Core Skills</h2>
-      <div class="card skills-grid">
-        <div class="skill">Drupal 9/10</div>
-        <div class="skill">Custom Modules</div>
-        <div class="skill">Twig/Theming</div>
-        <div class="skill">Entity API & Views</div>
-        <div class="skill">REST APIs</div>
-        <div class="skill">Make.com</div>
-        <div class="skill">N8n</div>
-        <div class="skill">Zapier</div>
-        <div class="skill">Lindy.ai</div>
-        <div class="skill">Late Node</div>
-        <div class="skill">PHP</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">HTML5 & CSS3</div>
-        <div class="skill">Git & GitHub</div>
-        <div class="skill">Docker</div>
-        <div class="skill">DDEV</div>
+      <div class="skill-card">
+        <img src="zapier-logo.svg" alt="Zapier" />
+        <p>Zapier Integration</p>
       </div>
-    </section>
-
-    <section>
-      <h2>Professional Experience</h2>
-      <div class="card">
-        <h3>LN Webworks Pvt. Ltd. (2021 – 2025)</h3>
-        <p>
-          At LN Webworks, I contributed to dozens of Drupal-based projects, ranging from complex multi-language portals to fully automated content delivery systems. I was responsible for building custom modules, API integrations, and automation workflows that directly improved operational efficiency and user engagement.
-        </p>
+      <div class="skill-card">
+        <img src="make-logo.svg" alt="Make" />
+        <p>Make.com Automation</p>
       </div>
-    </section>
-
-    <section>
-      <h2>Highlighted Projects</h2>
-
-      <div class="card">
-        <div class="project-title">Enterprise Intranet Portal – Drupal 10</div>
-        <p>
-          Developed a secure internal portal for a 500+ employee company. Implemented role-based permissions, views, and custom workflows using Drupal core APIs and contributed modules.
-        </p>
+      <div class="skill-card">
+        <img src="docker-logo.svg" alt="Docker" />
+        <p>Docker & DDEV</p>
       </div>
+    </div>
+  </section>
 
-      <div class="card">
-        <div class="project-title">CRM Task Automation – Make.com & N8n</div>
-        <p>
-          Integrated client CRM with Slack and Trello for automated deal flow tracking, reminders, and reporting. Reduced lead conversion time by over 60%.
-        </p>
+  <section>
+    <h2>Professional Journey</h2>
+    <div class="experience">
+      <div class="experience-item">
+        <h3>Senior Drupal Developer</h3>
+        <p>LN Webworks Pvt. Ltd. (2021 - Present)</p>
+        <ul>
+          <li>Led enterprise-level Drupal projects</li>
+          <li>Created custom modules for complex requirements</li>
+        </ul>
       </div>
-
-      <div class="card">
-        <div class="project-title">AI Task Routing – Lindy.ai</div>
-        <p>
-          Used Lindy.ai to dynamically prioritize and route tasks to project managers. Synced with Notion and Google Calendar to keep operations aligned.
-        </p>
+      <div class="experience-item">
+        <h3>Automation Specialist</h3>
+        <p>LN Webworks Pvt. Ltd. (2021 - Present)</p>
+        <ul>
+          <li>Automated workflows using Make.com and Zapier</li>
+          <li>Integrated multiple business systems for better efficiency</li>
+        </ul>
       </div>
+    </div>
+  </section>
 
-      <div class="card">
-        <div class="project-title">Containerized Dev Workflow – Docker & DDEV</div>
-        <p>
-          Standardized development and staging environments using Docker and DDEV. Cut onboarding time in half and ensured consistent deployment pipelines.
-        </p>
+  <section>
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Enterprise CMS</h3>
+        <p>Developed a scalable Drupal-based CMS for a large enterprise.</p>
+        <ul>
+          <li>Drupal 9/10</li>
+          <li>Custom Module Development</li>
+        </ul>
       </div>
-    </section>
-
-  </main>
+      <div class="project-card">
+        <h3>Global E-commerce</h3>
+        <p>Built a global Shopify e-commerce platform.</p>
+        <ul>
+          <li>Shopify Plus</li>
+          <li>Multi-Currency Support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Dev — Drupal Developer & Automation Specialist. All rights reserved.
+    <p>&copy; 2025 Dev — Drupal Developer & Automation Specialist</p>
+    <p><a href="https://github.com/Dev" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/dev" target="_blank">LinkedIn</a></p>
   </footer>
 
 </body>
